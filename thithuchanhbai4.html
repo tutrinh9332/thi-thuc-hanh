@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thi thực hanh 4</title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+  class Rectangle {
+    x;
+    y;
+    width;
+    height;
+    color;
+
+    constructor(x, y, width, height, c) {
+
+      this.x = x;
+      this.y = y;
+      this.width = width;
+      this.height = height;
+
+
+      this.color = c;
+
+    }
+
+    render(canvas) {
+      let ctx = canvas.getContext('2d');
+      ctx.fillStyle = this.color;
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+
+    }
+  }
+
+  let canvas = document.getElementById('canvas');
+  let rect1 = new Rectangle(10, 10, 300, 200, "max hex");
+  rect1.render(canvas)
+</script>
+
+</body>
+</html>

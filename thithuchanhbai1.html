@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<script>
+  let arr = [];
+  let n = +prompt('So diem co trong mang: ')
+  function duyetMang(n){
+    for (let i = 0;i<n;i++){
+      arr[i] = +prompt('Moi ban nhap diem vao vi tri ' + i + ":");
+    }
+  }
+
+  function findAvg(arr){
+    let sum = 0;
+    let avg= 0 ;
+    let x = arr;
+    for (let i =0; i<x.length;i++){
+      sum+=x[i];
+    }
+    avg = sum / (x.length);
+    return avg;
+  }
+  duyetMang(n);
+  alert('Gia tri trung binh cua mang la: ' + findAvg(arr));
+</script>
+
+</body>
+</html>
